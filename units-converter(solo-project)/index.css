@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    width: 100%;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    background-color: #212529;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+:root{
+    --lighttext: #ffff;
+    --darktext: #D2D2D2;
+
+}
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+}
+ .align-center{
+    align-items: center;
+ }
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 550px;
+    max-height: 550px;
+}
+
+.sectionOne{
+    height: 250px;
+    width: 100%;
+    background-image: linear-gradient(
+  45deg,
+  hsl(240deg 100% 20%) 0%,
+  hsl(289deg 100% 21%) 11%,
+  hsl(315deg 100% 27%) 22%,
+  hsl(329deg 100% 36%) 33%,
+  hsl(337deg 100% 43%) 44%,
+  hsl(357deg 91% 59%) 56%,
+  hsl(17deg 100% 59%) 67%,
+  hsl(34deg 100% 53%) 78%,
+  hsl(45deg 100% 50%) 89%,
+  hsl(55deg 100% 50%) 100%
+);
+}
+
+.sectionTwo{
+    height: 300px;
+    width: 100%;
+    background: #1F2937;
+}
+
+.header-font{
+    color : var(--lighttext);
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 38px;
+}
+.down-font{
+    color : var(--lighttext);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+}
+
+.small-font{
+    color : var(--darktext);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+}
+
+.mt-50{
+    margin-top: 50px;
+}
+.p-auto{
+    padding-left: auto;
+    padding-right: auto;
+}
+
+.unit{
+    background: transparent;
+    color: var(--lighttext);
+    font-size: 97px;
+    font-weight: 800;
+    width: 200px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    border: none;
+}
