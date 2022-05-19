@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="d-flex align-center">
+    <div class="d-flex">
+        <div class="container">
+            <div>
+                <div class="d-flex">
+                    <div id="alert-el" class="alert"></div>
+                </div>
+                <h3 class="header-txt">Generate a <span class="header-txt-green">random password</span></h3>
+                <p class="txt">Never use an insecure password again.</p>
+            </div>
+            <div class="controls">
+                <button id="genbtn-el" class="genBtn"><img class="btn-img" src="images/speed.png" alt="" width="14px">Generate passwords</button>
+                <input id="pwdlength-el" class="pwdlength" type="number" placeholder="Password length">
+            </div>
+            <div class="p-wordflex">
+                <div class="passwordbox">
+                    <input id="pwd-outputfour-el" class="passwordtxt" type="text">
+                    <img id="copyfour-el" class="copy-img" src="images/copy.png" alt="" width="20px">
+                </div>
+                <div class="passwordbox">
+                    <input id="pwd-outputthree-el" class="passwordtxt" type="text">
+                    <img id="copythree-el" class="copy-img" src="images/copy.png" alt="" width="20px">
+                </div>
+                <div class="passwordbox">
+                    <input id="pwd-outputtwo-el" class="passwordtxt" type="text">
+                    <img id="copytwo-el" class="copy-img" src="images/copy.png" alt="" width="20px">
+                </div>
+                <div class="passwordbox">
+                    <input id="pwd-outputone-el" class="passwordtxt" type="text">
+                    <img id="copyone-el" class="copy-img" src="images/copy.png" alt="" width="20px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

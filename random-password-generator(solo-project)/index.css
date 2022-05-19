@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Karla:ital,wght@0,200;0,800;1,400&display=swap');
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    width: 100%;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    background-color: #1C1C1C;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+:root{
+    --lighttext: #ffff;
+    --darktext: #D2D2D2;
+
+}
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+}
+ .align-center{
+    align-items: center;
+ }
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    height: 600px;
+    background-color: #1F2937;
+    padding: 60px;
+    gap: 70px;
+}
+
+.genBtn{
+    background-color: #10B981;
+    color: #ffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 42px;
+    width: 223px;
+    padding: 9px 17px 9px 15px;
+
+}
+
+.header-txt{
+    color: #ffff;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 800;
+    font-family: 'Karla', sans-serif;
+}
+
+.header-txt-green{
+    display: block;
+    color: #10B981;
+    
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.txt{
+    color: #D5D4D8;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+.btn-img{
+    display: inline-block;
+    margin-right: 11px;
+}
+
+.copy-img{
+    display: inline-block;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.passwordbox{
+    background-color: #273549;
+    width: 220px;
+    height: 39px;
+    border-radius: 5px;
+    text-align: center;
+    
+
+}
+
+
+.passwordtxt{
+    background-color: transparent;
+    color: #10B981;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 5px;
+    border: none;
+}
+
+.p-wordflex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:30px 30px;
+}
+
+.pwdlength {
+    background-color: #273549;
+    color: #10B981;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    height: 50px;
+}
+
+.pwdlength::placeholder {
+    color: #fff;
+
+}
+
+.alert {
+    background-color: #FB7185;
+    color: #ffff;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    height: 50px;
+    width: 80%;
+    border-radius: 20px;
+    display: none;
+}
