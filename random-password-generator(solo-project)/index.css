@@ -213,3 +213,41 @@ select {
     border-radius: 20px;
     display: none;
 }
+
+
+@media(max-width:416px){
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: #1F2937;
+        padding: 60px 29px 60px 29px;
+        gap: 70px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .passwordbox{
+        width: 341px;
+        
+    
+    }
+
+    .passwordtxt{
+        width: 300px;
+    }
+
+    .genBtn{
+        width: 353px;
+    }
+
+    .header-txt{
+        font-size: 37px;
+        line-height: 30px;
+    }
+
+}
