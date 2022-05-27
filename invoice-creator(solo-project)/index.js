@@ -7,7 +7,7 @@ const washCar = `
     <div class="items">
         <div>
             <p class="itemtxt">Wash Car</p>
-            <span class="itemsmtxt">Remove</span>
+            <span id="rmwashcar" class="itemsmtxt">Remove</span>
         </div>
         <p class="itemnub"><span class="grey">$</span>${carWashPrice}</p>
     </div>
@@ -16,7 +16,7 @@ const mowLawn = `
     <div class="items">
         <div>
             <p class="itemtxt">Mow Lawn</p>
-            <span class="itemsmtxt">Remove</span>
+            <span id="rmmowlawn" class="itemsmtxt">Remove</span>
         </div>
         <p class="itemnub"><span class="grey">$</span>${mowLawnPrice}</p>
     </div>`
@@ -24,32 +24,45 @@ const pullWeed = `
     <div class="items">
         <div>
             <p class="itemtxt">Pull Weeds</p>
-            <span class="itemsmtxt">Remove</span>
+            <span id="rmpullweed" class="itemsmtxt">Remove</span>
         </div>
-        <p class="itemnub"><span class="grey">$</span>${pullWeedPrice}</p>
+        <p class="itemnub"><span  class="grey">$</span>${pullWeedPrice}</p>
     </div>`
 const washCarBtn = document.querySelector('#washcarbtn');
 const mowLawnBtn = document.querySelector('#mowlawnbtn');
 const pullWeedBtn = document.querySelector('#pullweedbtn');
 const requestedServicesEl = document.querySelector('#requestedservices');
+const clearBtn = document.querySelector('#sendbtn')
 const totalpriceEl = document.querySelector('#total');
+let rmWashCar = {}
 let requestedServiceArr = []
 let checkedArr = []
 let totalAmt = 0
+// let loadcheckedArr = JSON.parse(localStorage.getItem('checkedArr'))
+// checkedArr = loadcheckedArr
+
+
+
 // console.log(requestedServicesEl.length)
 // event listeners
 washCarBtn.addEventListener('click', function () {
     // console.log('Washing car')
-    
+    // let loadcheckedArr = JSON.parse(localStorage.getItem('checkedArr'))
+    // checkedArr = loadcheckedArr
+  
     requestedServiceArr.push(washCar);
     // console.log(requestedServiceArr)
     checkduplicates(requestedServiceArr)
     totalPrice(checkedArr)
     render(checkedArr)
     // console.log(checkedArr)
+    localStorage.setItem('washcar', JSON.stringify(checkedArr.length))
+    // localStorage.setItem('checkedArr', JSON.stringify(checkedArr))
 })
 
 mowLawnBtn.addEventListener('click', function () {
+    // let loadcheckedArr = JSON.parse(localStorage.getItem('checkedArr'))
+    // checkedArr = loadcheckedArr
     // console.log('Mowing lawn')
     
     requestedServiceArr.push(mowLawn);
@@ -58,9 +71,13 @@ mowLawnBtn.addEventListener('click', function () {
     totalPrice(checkedArr)
     render(checkedArr)
     // console.log(checkedArr)
+    localStorage.setItem('mowLawn', JSON.stringify(checkedArr.length))
+    // localStorage.setItem('checkedArr', JSON.stringify(checkedArr))
 })
 
 pullWeedBtn.addEventListener('click', function () {
+    // let loadcheckedArr = JSON.parse(localStorage.getItem('checkedArr'))
+    // checkedArr = loadcheckedArr
     // console.log('Pulling weeds')
     
     requestedServiceArr.push(pullWeed);
@@ -69,6 +86,18 @@ pullWeedBtn.addEventListener('click', function () {
     totalPrice(checkedArr)
     render(checkedArr)
     // console.log(checkedArr)
+    localStorage.setItem('pullWeed', JSON.stringify(checkedArr.length))
+    // localStorage.setItem('checkedArr', JSON.stringify(checkedArr))
+})
+
+
+sendBtn.addEventListener('click', function () {
+    localStorage.clear()
+    requestedServiceArr = []
+    checkedArr = []
+    // localStorage.setItem('checkedArr', JSON.stringify(checkedArr))
+    render(checkedArr)
+    console.log(checkedArr)
 })
 
 function render(arr) {
@@ -107,9 +136,12 @@ function totalPrice(arr) {
     for (let i = 0; i < totalArr.length; i++) {
         total += totalArr[i]
     }
-    console.log(totalArr)
+    // console.log(totalArr)
     totalAmt = total
 }
+
+
+
 
 
 
