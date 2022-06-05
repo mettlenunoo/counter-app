@@ -80,6 +80,14 @@ a {
     text-decoration: underline;
 }
 
+.main-abt-title{
+    font-size: 1.5rem;
+
+}
+.abt-title{
+    font-size: 1.25rem;
+    color: #1792D2;
+}
 
 .footer-text {
     font-weight: 700px;
@@ -145,6 +153,14 @@ Layout
 
 .posts {
     margin-bottom: 3em;
+}
+
+.abt-content{
+    margin-bottom: 3em;
+}
+
+.abt-img {
+    margin-bottom: 2em;
 }
 
 
@@ -218,14 +234,14 @@ media queries
     }
 
     .widgets-secondary-img{
-        width: 420px;
+        width: 550px;
         height: 100px;
         object-fit: cover;
         object-position: center;
     }
 }
 
-@media (min-width: 675px) {
+@media (min-width: 676px) {
 
     .main-section {
         width: 68%;
@@ -254,7 +270,6 @@ media queries
 
     .posts-secondary{
         width: 65%;
-    }
     }
 
 }
