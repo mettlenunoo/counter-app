@@ -159,8 +159,12 @@ Layout
     margin-bottom: 3em;
 }
 
-.abt-img {
+.full-img {
     margin-bottom: 2em;
+    width: 714px;
+    max-height: 308px;
+    object-fit: cover;
+    object-position: center;
 }
 
 
@@ -197,11 +201,12 @@ nav a:focus {
 }
 
 .current-page {
-    border-bottom: 1px solid #707070;
+    border-bottom: 1px solid #1792d2;
 }
 
 .current-page:hover {
-    color: #707070;
+    color: #000;
+    
 }
 
 
@@ -235,7 +240,7 @@ media queries
 
     .widgets-secondary-img{
         width: 550px;
-        height: 100px;
+        max-height: 100px;
         object-fit: cover;
         object-position: center;
     }
